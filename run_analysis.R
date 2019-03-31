@@ -31,7 +31,7 @@ read_data <- function(data_dir, prefix, data_type=NA) {
   read.table(full_path, header=FALSE)
 }
 
-# Initialize variables
+# Initialize variables.
 base_dir <- getwd()
 orig_project_dir <- paste(base_dir, "UCI HAR Dataset", sep="/")
 project_dir <- paste(base_dir, "uci_har_dataset", sep="/")
@@ -44,7 +44,7 @@ tidy_dataset <- paste(base_dir, "tidy_dataset.txt", sep="/")
 # Clear data if it pre-exists.
 unlink(project_dir, recursive=TRUE)
 
-# Download and unzip files, 
+# Download and unzip files.
 download.file(method="curl", destfile=dest_file, url=url)
 unzip(dest_file, exdir=base_dir)
 file.rename(orig_project_dir, project_dir)
@@ -109,3 +109,5 @@ names(merged_data) <- gsub("^f", "frequency_", names(merged_data))
 
 merged_data <- ddply(merged_data, c("activity_name","subject_id"), numcolwise(mean))
 write.table(merged_data, tidy_dataset, row.names=FALSE)
+
+
