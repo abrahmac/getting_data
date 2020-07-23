@@ -30,3 +30,4 @@ The solution provided here consists of the following.
 5. ```source("./run_analysis.R")```
 6. Exit R.
 7. Review the file tidy_dataset.txt residing in the same base directory.
+
