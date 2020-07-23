@@ -74,4 +74,3 @@ The script carries out the following steps in the given order.
 ### Project Execution Details
 
 README.md provides details on how to run the solution script to generate a tidy dataset from the given experiment data.
-
